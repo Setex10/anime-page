@@ -69,8 +69,9 @@ form.addEventListener('submit', async (event) => {
         const peticion = await fetch(`${api}/anime?q=${inputBuscar}`);
     const data = await peticion.json();
     const datos = await data.data;
+    console.log(datos);
     datos.forEach(element => {
-        generarHtml(7, element.title, element.images.jpg.large_image_url, element.trailer.url);
+        generarHtml(7, element.title, element.images.jpg.large_image_url, element.url);
         swiperCaracterísticas(7);
     })
     }
