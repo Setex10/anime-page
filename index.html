@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/5ef7da4636.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="./dist/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="./src/css/index.css">
+</head>
+<body >
+    
+    <header class=" lg:h-50 fixed w-full z-50 top-0 left-0">
+        <nav class="flex justify-between p-4 bg-neutral-900 relative z-50">
+            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fsvguniquecreative.com%2Fwp-content%2Fuploads%2F2021%2F05%2Fmock-5-1536x1229.jpg&f=1&nofb=1" alt="" 
+            class="phone:w-14 phone:h-10 sm:w-20 sm:h-12 md:w-32 ">
+
+            <i class="fa-solid fa-bars text-white text-4xl absolute top-4 right-4 tablet:hidden" id="btnMenu"></i>
+
+            <ul class="max-tablet:hidden flex flex-row justify-center space-x-5 text-black" >
+
+                <a href="./src/animes/reseña.html" class="text-lg font-semibold  tablet:phone:block text-center ">
+                    <li class="bg-white p-1 rounded-sm hover:bg-sky-200">Buscar</li>
+                </a>
+                <a href="#" class="text-lg font-semibold   tablet:phone:block text-center ">
+                    <li class="bg-white p-1 rounded-sm hover:bg-sky-200">Mangas</li>
+                </a>
+                <a href="#" class="text-lg font-semibold   tablet:phone:block text-center ">
+                    <li class="bg-white p-1 rounded-sm hover:bg-sky-200">Recomendados</li>
+                </a>
+                <a href="#" class="text-lg font-semibold   tablet:phone:block text-center ">
+                    <li class="bg-white p-1 rounded-sm hover:bg-sky-200">Suporte</li>
+                </a>
+            </ul>
+
+            <ul class="tablet:hidden max-tablet:fixed max-tablet:bg-black max-tablet:w-screen 
+            max-tablet:h-screen max-tablet:top-0 max-tablet:right-0 max-tablet:flex max-tablet:flex-col
+            max-tablet:justify-center space-y-10 -translate-x-full
+            text-black" id="menu">
+
+                <i class="fa-solid fa-xmark text-white max-tablet:absolute max-tablet:top-6 max-tablet:right-8 max-tablet:text-4xl tablet:hidden" id="closeMenu"></i>
+
+                <a href="./src/animes/reseña.html" class="text-3xl text-center bg-white w-1/2 rounded-sm ml-auto mr-auto ">
+                    <li class="">Buscar</li>
+                </a>
+                <a href="#" class="text-3xl text-center bg-white w-1/2 rounded-sm ml-auto mr-auto ">
+                    <li class="">Mangas</li>
+                </a>
+                <a href="#" class="text-3xl text-center bg-white w-1/2 rounded-sm ml-auto mr-auto ">
+                    <li class="">Recomendados</li>
+                </a>
+                <a href="#" class="text-3xl text-center bg-white w-1/2 rounded-sm ml-auto mr-auto ">
+                    <li class="">Suporte</li>
+                </a>
+            </ul>
+
+        </nav>
+    </header>
+
+    <main id="main" class="pt-20 flex justify-center w-full bg-gradient-to-r from-indigo-300 to-indigo-800">
+        
+    </main>
+
+    <section class="mt-10">
+        <div class="w-11/12 border-b-4 border-purple-500 m-auto">
+            <h1 class="text-cyan-400 text-3xl ml-7 font-semibold mb-2">Animes recomendados</h1>
+        </div>
+        <div class="swiper swiperTail mySwiper1">
+            <div class="swiper-wrapper" id="carruselUno">
+            </div>
+          </div>
+        </div>
+
+        <div class="w-11/12 border-b-4 border-purple-500 m-auto">
+            <h1 class="text-cyan-400 text-3xl ml-7 font-semibold mb-2">Peliculas</h1>
+        </div>
+        <div class="swiper swiperTail mySwiper2">
+            <div class="swiper-wrapper" id="carruselDos">
+            </div>
+          </div>
+        </div>
+
+        <div class="w-11/12 border-b-4 border-purple-500 m-auto">
+            <h1 class="text-cyan-400 text-3xl ml-7 font-semibold mb-2">Mejor calificados</h1>
+        </div>
+        <div class="swiper swiperTail mySwiper3">
+            <div class="swiper-wrapper" id="carruselTres">
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <section class="synopsis flex flex-col justify-center p-4">
+        
+    </section>
+
+    <section class="mt-10">
+        <div class="w-11/12 border-b-4 border-purple-500 m-auto">
+            <h1 class="text-cyan-400 text-3xl ml-7 font-semibold mb-2">Transmitiendo en este momento</h1>
+        </div>
+        <div class="swiper swiperTail mySwiper4">
+            <div class="swiper-wrapper" id="carruselCuatro">
+            </div>
+          </div>
+        </div>
+
+        <div class="w-11/12 border-b-4 border-purple-500 m-auto">
+            <h1 class="text-cyan-400 text-3xl ml-7 font-semibold mb-2">Avant Garde</h1>
+        </div>
+        <div class="swiper swiperTail mySwiper5">
+            <div class="swiper-wrapper" id="carruselCinco">
+            </div>
+          </div>
+        </div>
+
+        <div class="w-11/12 border-b-4 border-purple-500 m-auto">
+            <h1 class="text-cyan-400 text-3xl ml-7 font-semibold mb-2">Romance</h1>
+        </div>
+        <div class="swiper swiperTail mySwiper6">
+            <div class="swiper-wrapper" id="carruselSeis">
+            </div>
+          </div>
+        </div>
+    </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./src/js/header.js"></script>
+    <script src="./src/js/index.js" type="module"></script>
+    <script src="./src/js/synopsis.js" type="module"></script>
+</body>
+</html>
+

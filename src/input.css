@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .swiperTail {
+        width: 95%;
+    height: 20rem;
+    position: relative;
+    margin:10px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    } 
+
+    .titleAnime{
+        font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+    }
+}

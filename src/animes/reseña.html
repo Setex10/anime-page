@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/5ef7da4636.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="../../dist/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="../css/index.css">
+    <title>Reseña</title>
+</head>
+<body>
+    
+    <header class="fixed top-0 w-full lg:h-50">
+        <nav class="flex justify-between p-4 bg-neutral-900 relative z-50">
+            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fsvguniquecreative.com%2Fwp-content%2Fuploads%2F2021%2F05%2Fmock-5-1536x1229.jpg&f=1&nofb=1" alt="" 
+            class="phone:w-14 phone:h-10 sm:w-20 sm:h-12 md:w-32 ">
+
+            <i class="fa-solid fa-bars text-white text-4xl absolute top-4 right-4 tablet:hidden" id="btnMenu"></i>
+
+            <ul class="max-tablet:hidden flex flex-row justify-center space-x-5 text-black" >
+
+                <a href="../../index.html" class="text-lg font-semibold  tablet:phone:block text-center ">
+                    <li class="bg-white p-1 rounded-sm hover:bg-sky-200">Inicio</li>
+                </a>
+                <a href="#" class="text-lg font-semibold   tablet:phone:block text-center ">
+                    <li class="bg-white p-1 rounded-sm hover:bg-sky-200">Mangas</li>
+                </a>
+                <a href="#" class="text-lg font-semibold   tablet:phone:block text-center ">
+                    <li class="bg-white p-1 rounded-sm hover:bg-sky-200">Recomendados</li>
+                </a>
+                <a href="#" class="text-lg font-semibold   tablet:phone:block text-center ">
+                    <li class="bg-white p-1 rounded-sm hover:bg-sky-200">Suporte</li>
+                </a>
+            </ul>
+
+            <ul class="tablet:hidden max-tablet:fixed max-tablet:bg-black max-tablet:w-screen 
+            max-tablet:h-screen max-tablet:top-0 max-tablet:right-0 max-tablet:flex max-tablet:flex-col
+            max-tablet:justify-center space-y-10 -translate-x-full
+            text-black" id="menu">
+
+                <i class="fa-solid fa-xmark text-white max-tablet:absolute max-tablet:top-6 max-tablet:right-8 max-tablet:text-4xl tablet:hidden" id="closeMenu"></i>
+
+                <a href="../../index.html" class="text-3xl text-center bg-white w-1/2 rounded-sm ml-auto mr-auto ">
+                    <li class="">Inicio</li>
+                </a>
+                <a href="#" class="text-3xl text-center bg-white w-1/2 rounded-sm ml-auto mr-auto ">
+                    <li class="">Mangas</li>
+                </a>
+                <a href="#" class="text-3xl text-center bg-white w-1/2 rounded-sm ml-auto mr-auto ">
+                    <li class="">Recomendados</li>
+                </a>
+                <a href="#" class="text-3xl text-center bg-white w-1/2 rounded-sm ml-auto mr-auto ">
+                    <li class="">Suporte</li>
+                </a>
+            </ul>
+
+        </nav>
+    </header>
+
+    <main class="pt-20">
+        <h1 class="text-white text-center text-3xl">Busca tu anime aquí</h1>
+        <div class="flex flex-col justify-center">
+            <form id="formBuscar" action="" method="get" class="flex flex-col justify-center m-auto">
+                <input type="text" name="buscar" id="buscar" placeholder="Nombre..." class="bg-white p-2 rounded-sm col-span-full">
+                <input type="submit" value="Buscar" id="btnBuscar" class="bg-white mt-4">
+            </form>
+            <div class="swiper swiperTail mySwiper7">
+                <div class="swiper-wrapper text-white" id="carrusel7">
+                </div>
+            </div>
+        </div>
+        <div>
+        </div>
+    </main>
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="../js/header.js"></script>
+    <script src="../js/buscar.js" type="module"></script>
+</body>
+</html>
