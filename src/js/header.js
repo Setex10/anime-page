@@ -1,6 +1,6 @@
-const btnMenu = document.getElementById('btnMenu');
-const closeMenu = document.getElementById('closeMenu');
-const menu = document.getElementById('menu');
+const btnMenu = document.getElementById('btnMenu'),
+    closeMenu = document.getElementById('closeMenu'),
+    menu = document.getElementById('menu');
 
 btnMenu.addEventListener('click', () => {
     menu.style.transform = 'translateX(0)';

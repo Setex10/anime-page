@@ -1,5 +1,5 @@
-const form = document.getElementById('formBuscar');
-const btnBuscar = document.getElementById('btnBuscar');
+const form = document.getElementById('formBuscar'),
+    btnBuscar = document.getElementById('btnBuscar');
 
 
 const api = "https://api.jikan.moe/v4"
@@ -7,13 +7,22 @@ const api = "https://api.jikan.moe/v4"
 function generarHtml(idCarrusel, title, img, trailer){
     let carrusel = document.getElementById(`carrusel${idCarrusel}`);
 
-    carrusel.innerHTML += ` 
-    <div class="swiper-slide child mt-2 rounded phone:w-10 ">
-    <a href="${trailer}"><img src="${img}" alt="${title}" class="imgAnime relative m-auto phone:w-11/12 phone:h-4/5 hover:cursor-pointer" 
-    id="${title}"></a>
-    
-</div>
-    `
+    const div = document.createElement("div"),
+        a = document.createElement("a"),
+        image = document.createElement("img");
+
+    div.classList.add("swiper-slide", "child", "mt-2", "rounded", "phone:w-10");
+    a.href = `${trailer}`
+    image.src = `${img}`
+    image.alt = `${title}`;
+    image.classList.add("imgAnime", "relative", "m-auto", 
+    "phone:w-11/12", "phone:h-4/5", "hover:cursor-pointer");
+    image.setAttribute("id", `${title}`);
+
+    a.appendChild(image);
+    div.appendChild(a);
+
+    carrusel.appendChild(div);
 }
 
 function swiperCaracterísticas(id){
@@ -66,16 +75,19 @@ form.addEventListener('submit', async (event) => {
     if(inputBuscar == ""){
         alert("Por favor ingrese una busqueda");
     } else {
-        const peticion = await fetch(`${api}/anime?q=${inputBuscar}`);
-    const data = await peticion.json();
-    const datos = await data.data;
-    
-    datos.forEach(element => {
-        generarHtml(7, element.title, element.images.jpg.large_image_url, element.url);
-        swiperCaracterísticas(7);
-    })
+            try {
+                const peticion = await fetch(`${api}/anime?q=${inputBuscar}`);
+            const data = await peticion.json();
+            const datos = await data.data;
+
+            datos.forEach(element => {
+                generarHtml(7, element.title, element.images.jpg.large_image_url, element.url);
+                swiperCaracterísticas(7);})
+            } catch (error) {
+                alert("No se ha encontrado la busqueda")
+            }
+            
+        
     }
-
-
 })
 

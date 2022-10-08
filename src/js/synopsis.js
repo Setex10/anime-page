@@ -22,10 +22,10 @@ function synopsisHtml (img, title, synopsisAnime, trailer){
     })
 }
 
-async function random (){
+const random = async() =>{
 
     try{
-        const peticion = await fetch(`${api}/random/anime`);
+        const peticion = await fetch(`${api}/random/anime?sfw=true`);
     const data = await peticion.json();
     const datos = await data.data;
 
